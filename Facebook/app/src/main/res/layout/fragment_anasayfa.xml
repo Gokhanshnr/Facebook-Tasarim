@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AnasayfaFragment">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/profile_gokhan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/Rounded" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/search_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName" />
+
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chipReels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="Reels"
+        android:textColor="@color/yellow"
+        app:chipBackgroundColor="@color/yellow2"
+        app:chipCornerRadius="10dp"
+        app:chipEndPadding="10dp"
+        app:chipIcon="@drawable/reels"
+        app:chipIconSize="20sp"
+        app:chipIconVisible="true"
+        app:chipMinHeight="31dp"
+        app:chipStartPadding="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/chipRoom"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chipRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="Room"
+        android:textColor="@color/green"
+        app:chipBackgroundColor="@color/green2"
+        app:chipCornerRadius="10dp"
+        app:chipEndPadding="10dp"
+        app:chipIcon="@drawable/chip_video"
+        app:chipIconSize="20sp"
+        app:chipIconVisible="true"
+        app:chipMinHeight="31dp"
+        app:chipStartPadding="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/chipGroup"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/chipReels"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chipGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="Group"
+        android:textColor="@color/red"
+        app:chipBackgroundColor="@color/red2"
+        app:chipCornerRadius="10dp"
+        app:chipEndPadding="10dp"
+        app:chipIcon="@drawable/chip_group"
+        app:chipIconSize="20sp"
+        app:chipIconVisible="true"
+        app:chipMinHeight="31dp"
+        app:chipStartPadding="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/chipLive"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/chipRoom"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chipLive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="Live"
+        android:textColor="@color/blue_c"
+        app:chipBackgroundColor="@color/blue_c2"
+        app:chipCornerRadius="10dp"
+        app:chipEndPadding="10dp"
+        app:chipIcon="@drawable/chip_mine"
+        app:chipIconSize="20sp"
+        app:chipIconVisible="true"
+        app:chipMinHeight="31dp"
+        app:chipStartPadding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/chipGroup"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            style="@style/Widget.AppCompat.AutoCompleteTextView"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/edit_text_bg"
+            android:drawableEnd="@drawable/ic_text_image_logo2"
+            android:ems="10"
+            android:hint=" What's on your mind?"
+            android:inputType="textPersonName"
+            android:paddingStart="16sp"
+            android:paddingEnd="16sp"
+            android:textColor="@color/edit_text_color"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipReels" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPost"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
